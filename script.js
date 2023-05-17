@@ -3,7 +3,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var blades = document.getElementsByClassName('blade');
     var angle = 0;
     var speed = 0;
-    var momentum = 0.98; // Adjust this value to control the slowdown rate
+    var maxSpeed = 10;
+    var momentum = 0.98;
   
     function spin() {
       angle += speed;
@@ -26,7 +27,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   
     // Increase speed on mouse down
     document.addEventListener('mousedown', function () {
-      setSpeed(10);
+      setSpeed(maxSpeed);
       spin(); // Start spinning immediately
     });
   
@@ -40,7 +41,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
       setSpeed(speed * momentum); // Apply momentum to the speed
     });
   
+    // Update momentum when the slider value changes
+    var momentumSlider = document.getElementById('momentum-slider');
+    momentumSlider.addEventListener('input', function () {
+      momentum = parseFloat(momentumSlider.value);
+    });
+  
+    // Update initial speed when the slider value changes
+    var speedSlider = document.getElementById('speed-slider');
+    speedSlider.addEventListener('input', function () {
+        maxSpeed = parseFloat(speedSlider.value);
+    });
+    
     // Start spinning on page load
     spin();
-  });
-  
+});
+ 
