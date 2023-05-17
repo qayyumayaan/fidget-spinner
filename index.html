@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fidget Spinner Simulation</title>
+  <style>
+    #spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #ccc;
+      overflow: hidden;
+    }
+    #spinner .blade {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform-origin: center bottom;
+      width: 5px;
+      height: 100px;
+      background-color: #333;
+      transition: transform 0.2s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div id="spinner">
+    <div class="blade"></div>
+    <div class="blade"></div>
+    <div class="blade"></div>
+  </div>
+
+</body>
+</html>
