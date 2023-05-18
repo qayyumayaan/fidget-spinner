@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var angle = 0;
     var speed = 0;
     var maxSpeed = 10;
-    var momentum = 0.98;
+    var momentum = 1 - .2/100;
   
     function spin() {
       angle += speed;
