@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       speed *= momentum;
   
       // Stop spinning when the speed is very low
-      if (Math.abs(speed) < 0.1) {
+      if (Math.abs(speed) < 0.05) {
         setSpeed(0);
       } else {
         requestAnimationFrame(spin);
