@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-    var spinner = document.getElementById('spinner');
+    var spinner = document.getElementById('fidget-spinner'); // Change 'spinner' to 'fidget-spinner'
     var blades = document.getElementsByClassName('blade');
     var angle = 0;
     var speed = 0;
@@ -56,4 +56,3 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // Start spinning on page load
     spin();
 });
- 
