@@ -2,9 +2,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var spinner = document.getElementById('fidget-spinner'); // Change 'spinner' to 'fidget-spinner'
     var blades = document.getElementsByClassName('blade');
     var angle = 0;
-    var speed = 0;
+    var speed = 20;
     var maxSpeed = 10;
-    var momentum = 1 - .2/100;
+    var momentum = .9999;
   
     function spin() {
       angle += speed;
