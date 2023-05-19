@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 
     // Start spinning on page load
-    spin();
+    // spin();
   } else {
     console.log('Spinner element not found.');
   }
